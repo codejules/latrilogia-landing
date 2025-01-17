@@ -1,11 +1,14 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
 		<title>Astro Basics</title>
+		<script
+			is:inline
+			src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"
+		></script>
 	</head>
 	<body>
 		<slot />
@@ -13,10 +16,10 @@
 </html>
 
 <style>
-	html,
 	body {
+		font-family: "Baloo Tammudu 2 Variable", system-ui;
 		margin: 0;
 		width: 100%;
-		height: 100%;
+		height: 100vh;
 	}
 </style>
