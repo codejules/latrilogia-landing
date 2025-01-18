@@ -1,0 +1,107 @@
+---
+import "@splidejs/splide/css";
+
+import { IMAGES } from "@/types/galeria";
+---
+
+<div class="py-10">
+    <h2 class="text-center text-6xl font-vidaloka pb-10">Galería</h2>
+
+    <div class="splide" role="group" aria-label="Image Slider">
+        <div class="splide__track">
+            <ul class="splide__list">
+                {
+                    IMAGES.map(({ url, alt, title }) => (
+                        <li class="splide__slide">
+                            <img
+                                src={url}
+                                alt={alt}
+                                title={title}
+                                class="rounded-lg shadow-lg
+                            hover:cursor-pointer transform duration-300 ease-in hover:scale-95"
+                                onclick="openModal(this.src)"
+                            />
+                        </li>
+                    ))
+                }
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div
+    id="image-modal"
+    class="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center hidden z-50"
+    onclick="closeModal()"
+>
+    <img
+        id="modal-image"
+        src=""
+        alt="Imagen ampliada"
+        class="w-80 md:w-2/5 object-contain rounded-xl"
+    />
+</div>
+
+<script is:inline>
+    function openModal(src) {
+        const modal = document.getElementById("image-modal");
+        const modalImage = document.getElementById("modal-image");
+        if (modalImage) {
+            modalImage.src = src;
+        }
+        if (modal) {
+            modal.classList.remove("hidden");
+        }
+    }
+
+    function closeModal() {
+        const modal = document.getElementById("image-modal");
+        if (modal) {
+            modal.classList.add("hidden");
+        }
+    }
+</script>
+
+<script>
+    import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
+    import Splide from "@splidejs/splide";
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const sliderElement = document.querySelector(".splide");
+        if (sliderElement && !(sliderElement as any).splide) {
+            new Splide(sliderElement as HTMLElement, {
+                type: "loop",
+                drag: "free",
+                gap: ".5rem",
+                focus: "center",
+                perPage: 4,
+                width: "100%",
+                arrows: false,
+                autoScroll: {
+                    speed: 1,
+                },
+                breakpoints: {
+                    768: { perPage: 2 },
+                    425: { perPage: 1 },
+                    375: { perPage: 1 },
+                },
+            }).mount({ AutoScroll });
+        }
+    });
+</script>
+
+<style>
+    .splide {
+        margin: 0 auto;
+        max-width: 800px;
+    }
+
+    :global(.splide__pagination) {
+        display: none;
+    }
+    :global(.splide__slide img) {
+        height: 350px;
+        object-fit: cover;
+        width: 100%;
+    }
+</style>
