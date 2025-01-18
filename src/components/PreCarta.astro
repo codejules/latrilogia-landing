@@ -1,0 +1,26 @@
+---
+import Section from "@/layouts/Section.astro";
+
+const IMAGES = [
+    {
+        url: "src/assets/img/bellota.webp",
+        classes: "hidden xl:block absolute -ml-16 pt-36 w-80",
+    },
+    {
+        url: "src/assets/img/oliva.webp",
+        classes: "hidden xl:block absolute right-0 pt-36 w-80",
+    },
+];
+---
+
+<Section>
+    <div>
+        <div>
+            {
+                IMAGES.map(({ url, classes }) => (
+                    <img class={classes} src={url} />
+                ))
+            }
+        </div>
+    </div>
+</Section>
