@@ -5,10 +5,14 @@ export default {
 		extend: {
 			colors: {
 				'nav': '#918086',
+				'button': '#cfb49b'
 			},
 			backgroundImage: {
 				'hero-pattern': "url('src/assets/img/bg_latrilogia.webp')",
-			}
+			},
+			fontFamily: {
+				'vidaloka': ['"Vidaloka"'],
+			  },
 		},
 	},
 	plugins: [require('flowbite/plugin')

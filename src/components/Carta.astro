@@ -1,20 +1,24 @@
 ---
 import Section from "@/layouts/Section.astro";
+import Ctas from "./Ctas.astro";
+
+const paragraphs = [
+    `La Trilogía nace del bonito significado de la <span class="font-semibold">triada mediterránea</span>, formada por los tres productos básicos de nuestra tierra valenciana: el <span class="font-semibold">pan</span>, el <span class="font-semibold">vino</span> y el <span class="font-semibold">aceite de oliva</span>.`,
+    `Los platos que salen de nuestra cocina están elaborados con <span class="font-semibold">ingredientes de calidad</span> y <span class="font-semibold">alimentos frescos y de temporada</span>. La cocina de La Trilogía es conocida en Valencia por su tradición en la dieta mediterránea. <span class="font-semibold">Pescados, carnes, arroces, ensaladas y postres deliciosos</span>, presentados con elegancia y esmero para que disfrutes de la comida con los cinco sentidos.`,
+    `Descubre nuestras <span class="font-semibold">cartas</span>, tan claras como el <span class="font-semibold">mar</span>.`,
+];
 ---
 
 <Section>
-    <div>
-        <p>
-            La Trilogía nace del bonito significado de la triada mediterránea,
-            formada por los tres productos básicos de nuestra tierra valenciana:
-            el pan, el vino y el aceite de oliva. Los platos que salen de
-            nuestra cocina están elaborados con ingredientes de calidad y
-            alimentos frescos y de temporada. La cocina de La Trilogía es
-            conocida en Valencia por su tradición en la dieta mediterránea.
-            Pescados, carnes, arroces, ensaladas y postres deliciosos,
-            presentados con elegancia y esmero para que disfrutes de la comida
-            con los cinco sentidos. Descubre nuestras cartas, tan claras como el
-            mar.
-        </p>
+    <div class="max-w-screen-md mx-auto py-20 flex flex-col gap-12">
+        <h2 class="text-center text-6xl font-vidaloka">Carta</h2>
+        <div class="flex flex-col justify-center gap-4 text-center">
+            {
+                paragraphs.map((text, index) => (
+                    <p class="leading-relaxed" set:html={text} />
+                ))
+            }
+        </div>
+        <Ctas />
     </div>
 </Section>
