@@ -9,6 +9,7 @@ export default {
 			},
 			backgroundImage: {
 				'hero-pattern': "url('src/assets/img/bg_latrilogia.webp')",
+				'hero-contact': "url('src/assets/img/bg-contacto.webp')",
 			},
 			fontFamily: {
 				'vidaloka': ['"Vidaloka"'],

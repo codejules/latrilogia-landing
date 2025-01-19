@@ -1,0 +1,54 @@
+---
+
+---
+
+<form class="space-y-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+        <div>
+            <input
+                type="text"
+                id="text"
+                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 rounded-lg"
+                placeholder="Nombre"
+                required
+            />
+        </div>
+        <div>
+            <input
+                type="email"
+                id="email"
+                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 rounded-lg"
+                placeholder="Email"
+                required
+            />
+        </div>
+        <div>
+            <input
+                type="text"
+                id="subject"
+                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 rounded-lg"
+                placeholder="Asunto"
+                required
+            />
+        </div>
+    </div>
+    <div class="">
+        <textarea
+            id="message"
+            rows="6"
+            class="block p-2.5 w-full text-gray-900 bg-gray-50 rounded-lg"
+            placeholder="Mensaje"></textarea>
+    </div>
+
+    <div class="hidden">
+        <label for="honeypot">Honeypot</label>
+        <input type="text" name="honeypot" id="honeypot" />
+    </div>
+
+    <button
+        type="submit"
+        class="hover:text-black transition ease-in duration-300 bg-button pt-4 pb-2 px-12 text-xl uppercase text-center text-white rounded-full"
+        >Enviar</button
+    >
+</form>
+

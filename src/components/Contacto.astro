@@ -1,0 +1,27 @@
+---
+import Section from "@/layouts/Section.astro";
+import Form from "./Form.astro";
+---
+
+<Section>
+    <div class="max-w-screen-lg mx-auto flex flex-row gap-6 py-20">
+        <div>
+            <img
+                class="w-96"
+                src="src/assets/img/maps-latrilogia.webp"
+                alt=""
+                title=""
+            />
+        </div>
+        <div class="bg-hero-contact p-4 bg-left-top bg-cover bg-no-repeat">
+            <div class="bg-white flex flex-col gap-8 p-12 text-center">
+                <h2 class="text-center text-6xl font-vidaloka">Contacto</h2>
+                <p>
+                    Si tienes alguna duda, soluciónala en nuestras preguntas
+                    frecuentes o escríbenos rellenando el siguiente formulario:
+                </p>
+                <Form />
+            </div>
+        </div>
+    </div>
+</Section>
