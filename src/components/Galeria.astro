@@ -45,52 +45,10 @@ import Section from "@/layouts/Section.astro";
 
 </Section>
 
-<script is:inline>
-    function openModal(src) {
-        const modal = document.getElementById("image-modal");
-        const modalImage = document.getElementById("modal-image");
-        if (modalImage) {
-            modalImage.src = src;
-        }
-        if (modal) {
-            modal.classList.remove("hidden");
-        }
-    }
-
-    function closeModal() {
-        const modal = document.getElementById("image-modal");
-        if (modal) {
-            modal.classList.add("hidden");
-        }
-    }
-</script>
-
 <script>
-    import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
-    import Splide from "@splidejs/splide";
-
-    document.addEventListener("DOMContentLoaded", function () {
-        const sliderElement = document.querySelector(".splide");
-        if (sliderElement && !(sliderElement as any).splide) {
-            new Splide(sliderElement as HTMLElement, {
-                type: "loop",
-                drag: "free",
-                gap: ".5rem",
-                focus: "center",
-                perPage: 4,
-                width: "100%",
-                arrows: false,
-                autoScroll: {
-                    speed: 1,
-                },
-                breakpoints: {
-                    768: { perPage: 2 },
-                    425: { perPage: 1 },
-                    375: { perPage: 1 },
-                },
-            }).mount({ AutoScroll });
-        }
-    });
+    import { initSplide } from "@/types/initSplide";
+    import { openModal, closeModal } from "@/types/openModal";
+    initSplide();
 </script>
 
 <style>
