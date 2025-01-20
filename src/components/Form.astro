@@ -38,7 +38,7 @@
                 Ingresa tu nombre
             </div>
         </div>
-    
+
         <div class="mb-5">
             <label for="email_address" class="sr-only">Email</label><input
                 id="email_address"
@@ -51,11 +51,13 @@
             <div class="empty-feedback text-red-400 text-sm mt-1 p-2 text-left">
                 Ingresa tu email
             </div>
-            <div class="invalid-feedback text-red-400 text-sm mt-1 p-2 text-left">
+            <div
+                class="invalid-feedback text-red-400 text-sm mt-1 p-2 text-left"
+            >
                 Ingresa un email válido
             </div>
         </div>
-    
+
         <div class="mb-5">
             <input
                 type="text"
@@ -71,8 +73,6 @@
         </div>
     </div>
 
-    
-
     <div class="mb-3">
         <textarea
             name="message"
@@ -87,20 +87,41 @@
         </div>
     </div>
 
-    <!-- hCaptcha: Recommended for Advanced Spam Protection. -->
-    <div
-        class="h-captcha"
-        data-captcha="true"
-        data-lang="es"
-    >
+    <div class="flex items-center mb-12 flex-row">
+        <div class="flex flex-row items-center">
+            <input
+                required
+                id="default-checkbox"
+                type="checkbox"
+                value=""
+                class="size-6 text-blue-600 bg-gray-100 border-gray-300 rounded
+                 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2
+                  dark:bg-gray-700 dark:border-gray-600"
+            />
+            <label
+                for="default-checkbox"
+                class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                >He leído y acepto la Política de Privacidad de la empresa*</label
+            >
+
+        </div>
+
+        <div
+            class="empty-feedback invalid-feedback text-red-400 text-sm mt-1 pl-2 text-left"
+        >
+            Obligatorio aceptar la Política de Privacidad
+        </div>
     </div>
+
+    <!-- hCaptcha: Recommended for Advanced Spam Protection. -->
+    <div class="h-captcha" data-captcha="true" data-lang="es"></div>
 
     <button
         type="submit"
-        class="bg-button px-10 pb-2 pt-4 uppercase rounded-full text-white mt-8"
+        class="hover:text-black transition ease-in duration-300 bg-button px-10 pb-2 pt-4 uppercase rounded-full text-white mt-8"
         >Enviar</button
     >
-    <div id="result" class="mt-3 text-center"></div>
+    <div id="result" class="mt-3 text-left"></div>
 </form>
 
 <style>
@@ -158,7 +179,7 @@
                         let json = await response.json();
                         if (response.status == 200) {
                             result.classList.add("text-green-500");
-                            result.innerHTML = 'Email enviado correctamente.'
+                            result.innerHTML = "Email enviado correctamente.";
                         } else {
                             console.log(response);
                             result.classList.add("text-red-500");
