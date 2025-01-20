@@ -17,7 +17,8 @@ const MENU = [
         src: "./logo-latrilogia.webp",
         alt: "Logo Restaurante La Trilogia",
         title: "Logo Restaurante La Trilogia",
-        clase: "w-1/2 lg:w-9/12 mx-auto py-6 px-3",
+        clase: "block py-2 px-3 text-nav rounded md:bg-transparent uppercase font-semibold",
+        imgClass: "w-1/2 lg:w-9/12 mx-auto",
     },
     {
         text: "Contacto",
@@ -28,7 +29,7 @@ const MENU = [
     {
         text: "Reservar",
         url: "https://elobrador.myrestoo.net/es/reservar",
-        clase: "hover:text-black transition ease-in mx-auto uppercase bg-button rounded-full text-xl text-white pt-3 px-8",
+        clase: "hover:text-black transition ease-in mx-auto uppercase bg-button rounded-full text-xl text-white pt-2 px-4 md:pt-3 md:px-8",
         external: true,
     },
 ];
@@ -51,17 +52,17 @@ const MENU = [
             </button>
             <div class="hidden w-full md:block md:w-auto" id="navbar-default">
                 <ul
-                    class="h-full font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row items-center gap-x-10"
+                    class="h-full font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row items-center gap-4"
                 >
                     {
                         MENU.map((item) =>
                             item.type === "logo" ? (
-                                <li class="flex items-center space-x-3 rtl:space-x-reverse">
-                                    <a href="/">
+                                <li>
+                                    <a href="/" class={item.clase}>
                                         <img
                                             src={item.src}
                                             alt={item.alt}
-                                            class={item.clase}
+                                            class={item.imgClass}
                                         />
                                     </a>
                                 </li>
