@@ -4,9 +4,11 @@ import Section from "@/layouts/Section.astro";
 const BUTTONS = [
     {
         title: "La carta",
+        url: 'src/assets/pdf/carta-restaurante-latrilogia_vf.pdf'
     },
     {
         title: "Menú grupos empresas",
+        url: 'src/assets/pdf/carta-menu-empresas-restaurante-la-trilogia-2022.pdf'
     },
 ];
 ---
@@ -14,9 +16,11 @@ const BUTTONS = [
 <Section>
     <div class="flex flex-col md:flex-row justify-evenly gap-4 md:gap-1">
         {
-            BUTTONS.map(({ title }) => (
+            BUTTONS.map(({ title, url }) => (
                 <button class="uppercase bg-button rounded-full text-xl text-white pt-3 px-8">
+                    <a href={url} target="_blank" >
                     {title}
+                </a>
                 </button>
             ))
         }
