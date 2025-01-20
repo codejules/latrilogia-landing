@@ -1,5 +1,39 @@
 ---
+const subject = "Formulario web Restaurante La Trilogia";
 
+type Fields = {
+    type: "text" | "email" | "password" | "tel";
+    name: string;
+    placeholder: string;
+    required: boolean;
+    validationMessage: string;
+    feedbackMessage?: string;
+};
+
+const FIELDS: Fields[] = [
+    {
+        type: "text",
+        name: "name",
+        placeholder: "Nombre",
+        required: true,
+        validationMessage: "Ingresa tu nombre",
+    },
+    {
+        type: "email",
+        name: "email",
+        placeholder: "Email",
+        required: true,
+        validationMessage: "Ingresa un email válido",
+        feedbackMessage: "Ingresa tu email",
+    },
+    {
+        type: "text",
+        name: "subject",
+        placeholder: "Asunto",
+        required: false,
+        validationMessage: "Ingresa el asunto",
+    },
+];
 ---
 
 <form
@@ -15,60 +49,30 @@
         name="access_key"
         value="ecfd492c-5690-4951-9be2-b678fecf204e"
     />
-    <input
-        type="hidden"
-        name="from_name"
-        value="Formulario web Restaurante La Trilogia"
-    />
+    <input type="hidden" name="from_name" value={subject} />
 
     <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-        <div class="mb-5">
-            <input
-                type="text"
-                placeholder="Nombre"
-                required
-                class="w-full px-4 py-3 border placeholder:text-slate-400 rounded-md outline-none focus:ring-4 border-slate-300 focus:border-slate-600 ring-slate-100"
-                name="name"
-            />
-            <div
-                class="empty-feedback invalid-feedback text-red-400 text-sm mt-1 p-2 text-left"
-            >
-                Ingresa tu nombre
-            </div>
-        </div>
-
-        <div class="mb-5">
-            <label for="email_address" class="sr-only">Email</label><input
-                id="email_address"
-                type="email"
-                placeholder="Email"
-                name="email"
-                required
-                class="w-full px-4 py-3 border placeholder:text-slate-400 rounded-md outline-none focus:ring-4 border-slate-300 focus:border-slate-600 ring-slate-100"
-            />
-            <div class="empty-feedback text-red-400 text-sm mt-1 p-2 text-left">
-                Ingresa tu email
-            </div>
-            <div
-                class="invalid-feedback text-red-400 text-sm mt-1 p-2 text-left"
-            >
-                Ingresa un email válido
-            </div>
-        </div>
-
-        <div class="mb-5">
-            <input
-                type="text"
-                placeholder="Asunto"
-                class="w-full px-4 py-3 border placeholder:text-slate-400 rounded-md outline-none focus:ring-4 border-slate-300 focus:border-slate-600 ring-slate-100"
-                name="subject"
-            />
-            <div
-                class="empty-feedback invalid-feedback text-red-400 text-sm mt-1 p-2 text-left"
-            >
-                Ingresa el asunto
-            </div>
-        </div>
+        {
+            FIELDS.map((field) => (
+                <div class="mb-5">
+                    <input
+                        type={field.type}
+                        placeholder={field.placeholder}
+                        required={field.required ? "required" : ""}
+                        class="w-full px-4 py-3 border placeholder:text-slate-400 rounded-md outline-none focus:ring-4 border-slate-300 focus:border-slate-600 ring-slate-100"
+                        name={field.name}
+                    />
+                    <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1 p-2 text-left">
+                        {field.validationMessage}
+                    </div>
+                    {field.feedbackMessage && (
+                        <div class="invalid-feedback text-red-400 text-sm mt-1 p-2 text-left">
+                            {field.feedbackMessage}
+                        </div>
+                    )}
+                </div>
+            ))
+        }
     </div>
 
     <div class="mb-3">
@@ -95,10 +99,14 @@
                  focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2
                   dark:bg-gray-700 dark:border-gray-600"
         />
+
         <label
             for="default-checkbox"
             class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-            >He leído y acepto la Política de Privacidad de la empresa*</label
+            >He leído y acepto la <a
+                href="/politica-privacidad"
+                class="hover:text-button">Política de Privacidad</a
+            > de la empresa*</label
         >
 
         <div
@@ -146,8 +154,6 @@
 </style>
 
 <script is:inline>
-    // use astro:page-load event if you are using View Transitions
-
     document.addEventListener(
         "DOMContentLoaded",
         () => {

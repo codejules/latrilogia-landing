@@ -15,12 +15,16 @@ import Form from "./Form.astro";
                     title=""
                     class="lg:w-96"
                 />
-                <div class="pt-4 flex flex-col gap-2 text-right">
-                    <p>C/ Sant Clement 4.</p>
-                    <p>46015 València, Valencia.</p>
-                    <p>Tel: 96 193 26 55</p>
-                </div>
             </a>
+            <div class="pt-4 flex flex-col text-right">
+                <p>C/ Sant Clement 4.</p>
+                <p>46015 València, Valencia.</p>
+                <p>Tel: <a href="tel:193 26 55" class="hover:text-button">96 193 26 55</a></p>
+                <p>
+                    <a href="mailto:web@restaurantelatrilogia.es" class="hover:text-button"
+                        >web@restaurantelatrilogia.es</a>
+                </p>
+            </div>
         </div>
         <div class="bg-hero-contact p-4 bg-left-top bg-cover bg-no-repeat mx-4">
             <div
@@ -30,7 +34,8 @@ import Form from "./Form.astro";
                     Contacto
                 </h2>
                 <p>
-                    Si tienes alguna duda, escríbenos rellenando el siguiente formulario:
+                    Si tienes alguna duda, escríbenos rellenando el siguiente
+                    formulario:
                 </p>
                 <Form />
             </div>
