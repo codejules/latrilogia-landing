@@ -29,7 +29,7 @@ const MENU = [
     {
         text: "Reservar",
         url: "https://elobrador.myrestoo.net/es/reservar",
-        clase: "hover:text-black transition ease-in mx-auto uppercase bg-button rounded-full text-xl text-white pt-2 px-4 md:pt-3 md:px-8",
+        clase: "hover:text-black transition ease-in mx-auto uppercase bg-button rounded-full md:font-semibold text-white pt-2 px-4 md:pt-3 md:px-8",
         external: true,
     },
 ];
@@ -93,23 +93,6 @@ const MENU = [
 </header>
 
 <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const toggleButton = document.querySelector(
-            '[data-collapse-toggle="navbar-default"]',
-        );
-        const navbar = document.getElementById("navbar-default");
-        const links = document.querySelectorAll("#navbar-default a");
-
-        links.forEach((link) => {
-            link.addEventListener("click", () => {
-                if (
-                    toggleButton &&
-                    toggleButton.getAttribute("aria-expanded") === "true"
-                ) {
-                    navbar ? navbar.classList.add("hidden") : "";
-                    toggleButton.setAttribute("aria-expanded", "false");
-                }
-            });
-        });
-    });
+    import { menuToggle } from "@/types/menuToggle";
+    menuToggle();
 </script>
