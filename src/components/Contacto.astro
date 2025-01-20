@@ -4,27 +4,33 @@ import Form from "./Form.astro";
 ---
 
 <Section>
-    <div class="max-w-screen-xl mx-auto flex flex-row gap-6 py-20">
-        <div class="w-1/3">
+    <div
+        class="max-w-screen-xl mx-auto flex flex-col justify-center lg:flex-row gap-6 py-20"
+    >
+        <div class="flex flex-col px-4">
             <a href="https://goo.gl/maps/FP1MUzfF9WYwBBiq8" target="_blank">
                 <img
                     src="src/assets/img/maps-latrilogia.webp"
                     alt=""
                     title=""
+                    class="lg:w-96"
                 />
-            <div class="pt-4 flex flex-col gap-2 text-right">
+                <div class="pt-4 flex flex-col gap-2 text-right">
                     <p>C/ Sant Clement 4.</p>
                     <p>46015 València, Valencia.</p>
                     <p>Tel: 96 193 26 55</p>
-                </a>
-            </div>
+                </div>
+            </a>
         </div>
-        <div class="bg-hero-contact p-4 bg-left-top bg-cover bg-no-repeat">
-            <div class="bg-white flex flex-col gap-8 p-12 text-center">
-                <h2 class="text-center text-6xl font-vidaloka">Contacto</h2>
+        <div class="bg-hero-contact p-4 bg-left-top bg-cover bg-no-repeat mx-4">
+            <div
+                class="bg-white flex flex-col gap-8 py-4 px-2 lg:p-12 text-center"
+            >
+                <h2 class="text-center text-4xl lg:text-6xl font-vidaloka">
+                    Contacto
+                </h2>
                 <p>
-                    Si tienes alguna duda, soluciónala en nuestras preguntas
-                    frecuentes o escríbenos rellenando el siguiente formulario:
+                    Si tienes alguna duda, escríbenos rellenando el siguiente formulario:
                 </p>
                 <Form />
             </div>

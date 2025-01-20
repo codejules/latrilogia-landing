@@ -1,0 +1,23 @@
+---
+import Section from "@/layouts/Section.astro";
+
+const CONTENT = [
+    { text: "Aviso Legal" },
+    { text: "Política de Privacidad" },
+    { text: "Política de Cookies" },
+];
+---
+
+<Section>
+    <div class="max-w-screen-xl mx-auto">
+        <ul class="flex flex-col justify-end items-end">
+            {
+                CONTENT.map(({ text }) => (
+                    <li class="hover:text-button transition ease-in duration-300 cursor-pointer">
+                        {text}
+                    </li>
+                ))
+            }
+        </ul>
+    </div>
+</Section>
