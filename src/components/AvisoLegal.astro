@@ -1,0 +1,29 @@
+---
+import Section from "@/layouts/Section.astro";
+import avisoLegal from "@/data/avisoLegal.json";
+---
+
+<Section>
+  <div
+    class="max-w-screen-xl mx-auto flex flex-col justify-center pt-20 md:pt-36 lg:pt-52 px-4"
+  >
+    <h2 class="text-4xl text-center pb-10 font-vidaloka">{avisoLegal.titulo}</h2>
+
+    {
+      avisoLegal.secciones.map((seccion) => (
+        <>
+          <p class="font-bold">{seccion.titulo}</p>
+          {seccion.contenido.map((parrafo) => (
+            <p>{parrafo}</p>
+          ))}
+          {seccion.detalle &&
+            seccion.detalle.map((detalle) => (
+              <p>
+                <strong>{detalle.etiqueta}:</strong> {detalle.contenido}
+              </p>
+            ))}
+        </>
+      ))
+    }
+  </div>
+</Section>

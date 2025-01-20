@@ -1,0 +1,66 @@
+{
+  "titulo": "Aviso Legal",
+  "secciones": [
+    {
+      "titulo": "1. Información Legal",
+      "contenido": [
+        "En cumplimiento de lo establecido en el artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (en adelante, LSSI-CE), se informa de modo expreso, preciso e inequívoco, tanto a los usuarios, destinatarios del servicio, como a los órganos competentes, de los siguientes aspectos relativos al prestador de servicios de la sociedad de la información:"
+      ],
+      "detalle": [
+        {"etiqueta": "Identidad - Entidad", "contenido": "RESTAURANTE LA TRILOGÍA, S.L."},
+        {"etiqueta": "CIF/NIF", "contenido": ""},
+        {"etiqueta": "Dirección postal", "contenido": "C/ San Clemente 4, 46015 València (Valencia)"},
+        {"etiqueta": "Teléfono", "contenido": ""},
+        {"etiqueta": "Correo electrónico", "contenido": "info@restaurantelatrilogia.es"},
+        {"etiqueta": "Objeto Social", "contenido": "Hostelería"},
+        {"etiqueta": "Sitio web", "contenido": "https://www.restaurantelatrilogia.es/"}
+      ]
+    },
+    {
+      "titulo": "2. Condiciones Generales de Uso",
+      "contenido": [
+        "El acceso a nuestra Página Web / Blog (en adelante Sitio Web) es libre y gratuito para todas las personas, sin que para ello sea necesario realizar una suscripción o contratación previa de algún servicio proporcionado por nuestra entidad.",
+        "El usuario que utilice o navegue por nuestro sitio web acepta de manera implícita las condiciones de uso y demás especificaciones del presente Aviso Legal."
+      ]
+    },
+    {
+      "titulo": "3. Propiedad Intelectual",
+      "contenido": [
+        "El código fuente, los diseños gráficos, las imágenes, las fotografías, los sonidos, las animaciones, el software, los textos, así como la información y los contenidos que se recogen en el presente sitio web están protegidos por la legislación española sobre los derechos de propiedad intelectual e industrial a favor de nuestra entidad."
+      ]
+    },
+    {
+      "titulo": "4. Uso de cookies y modificaciones en el Sitio Web",
+      "contenido": [
+        "Nuestro sitio web utiliza cookies y/o tecnologías similares que almacenan y recuperan información cuando navega."
+      ]
+    },
+    {
+      "titulo": "5. Compromisos con el usuario",
+      "contenido": [
+        "Nuestra entidad se compromete a NO REALIZAR PUBLICIDAD ENGAÑOSA, y a corregir cualquier error o actualización defectuosa en el contenido de la web tan pronto como se detecte.",
+        "Nuestra entidad se compromete a NO REMITIR COMUNICACIONES COMERCIALES SIN IDENTIFICARLAS COMO TALES, conforme a la Ley 34/2002 de Servicios de la Sociedad de la Información y de comercio electrónico."
+      ]
+    },
+    {
+      "titulo": "6. Compromiso de protección de datos personales",
+      "contenido": [
+        "Nuestra entidad se compromete a realizar el tratamiento de cualquier dato personal bajo el estricto cumplimiento de lo dispuesto en el Reglamento General de Protección de Datos Personales (RGPD 2016/679) y la Ley Orgánica 3/2018 de protección de datos personales y garantías de los derechos digitales (LOPDPGDD).",
+        "Para más información, invitamos a todos los usuarios a consultar nuestra Política de Privacidad."
+      ]
+    },
+    {
+      "titulo": "7. Incumplimientos y Responsabilidades",
+      "contenido": [
+        "Nuestra entidad no se hace responsable del incumplimiento de cualquier norma aplicable en que pueda incurrir el usuario al acceder al sitio web o usar su contenido.",
+        "Nuestra entidad no será responsable de los daños y perjuicios derivados del uso de la información, servicios o enlaces de terceros disponibles en el sitio web."
+      ]
+    },
+    {
+      "titulo": "8. Legislación Aplicable y Fuero Jurisdiccional",
+      "contenido": [
+        "Para toda cuestión legal relacionada con el uso del sitio web, será de aplicación la legislación española, siendo competentes los Juzgados y Tribunales correspondientes."
+      ]
+    }
+  ]
+}

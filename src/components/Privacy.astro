@@ -2,9 +2,9 @@
 import Section from "@/layouts/Section.astro";
 
 const CONTENT = [
-    { text: "Aviso Legal" },
-    { text: "Política de Privacidad" },
-    { text: "Política de Cookies" },
+    { text: "Aviso Legal", url: "/aviso-legal" },
+    { text: "Política de Privacidad", url: "/politica-privacidad" },
+    { text: "Política de Cookies", url: "politica-cookies" },
 ];
 ---
 
@@ -12,9 +12,9 @@ const CONTENT = [
     <div class="max-w-screen-xl mx-auto px-4 xl:px-10">
         <ul class="flex flex-col justify-end items-end">
             {
-                CONTENT.map(({ text }) => (
+                CONTENT.map(({ text, url }) => (
                     <li class="hover:text-button transition ease-in duration-300 cursor-pointer">
-                        {text}
+                        <a href={url}> {text}</a>
                     </li>
                 ))
             }

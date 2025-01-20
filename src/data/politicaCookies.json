@@ -1,0 +1,97 @@
+{
+    "titulo": "Política de Cookies",
+    "contenido": [
+      {
+        "parrafo": "Según la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y Comercio Electrónico, (LSSICE) le informamos que nuestro sitio web utiliza Cookies propias y de terceros."
+      },
+      {
+        "parrafo": "Este sitio web utiliza cookies y/o tecnologías similares (en adelante cookies) que almacenan y recuperan información cuando navega. En general, estas tecnologías pueden servir para finalidades muy diversas, como, por ejemplo, reconocerle como usuario, obtener información sobre sus hábitos de navegación, enviarle publicidad o personalizar la forma en que se muestra el contenido."
+      },
+      {
+        "titulo": "1. Tipo de cookies según su finalidad",
+        "cookies": [
+          {
+            "tipo": "Cookies Técnicas",
+            "descripcion": "Permiten al usuario controlar el tráfico de datos, identificar la sesión, realizar compras, realizar solicitudes, utilizar elementos de seguridad durante la navegación, almacenar contenidos para visualización de videos o sonido o compartir contenidos mediante las redes sociales."
+          },
+          {
+            "tipo": "Cookies de Análisis/Medición",
+            "descripcion": "Permiten al responsable de estas, realizar análisis del comportamiento de los usuarios del sitio web y se utilizan para la medición de la actividad del sitio web y para elaborar perfiles de navegación de los usuarios, con la finalidad de ofrecer mejoras de uso para los usuarios."
+          },
+          {
+            "tipo": "Cookies Sociales",
+            "descripcion": "Son necesarias para las redes sociales externas (Facebook, Twitter, Pinterest, Instagram, etc.). Su función es controlar la interacción con los widgets sociales dentro del sitio web."
+          },
+          {
+            "tipo": "Cookies de Geolocalización",
+            "descripcion": "Permiten conocer el lugar donde se encuentra el usuario y ofrecerle la información adecuada según la ciudad o país que más le interesa. Esta cookie es anónima."
+          },
+          {
+            "tipo": "Cookies de Personalización",
+            "descripcion": "Permiten reconocer al usuario y ofrecerle información personalizada, como el idioma, tipo de navegador, etc."
+          },
+          {
+            "tipo": "Cookies Publicitarias",
+            "descripcion": "Permiten gestionar la publicidad que hay en el sitio web, adecuándola al servicio o productos solicitados."
+          },
+          {
+            "tipo": "Cookies de Publicidad Comportamental",
+            "descripcion": "Permiten gestionar la publicidad que hay en el sitio web, almacenando comportamientos del usuario como resultado de la observación continuada de sus hábitos de navegación, lo que permite desarrollar publicidad con un perfil específico."
+          },
+          {
+            "tipo": "Seguridad",
+            "descripcion": "Se trata de cookies para identificar a usuarios, evitar el uso fraudulento de credenciales y proteger los datos de usuarios frente a terceros no autorizados."
+          }
+        ]
+      },
+      {
+        "titulo": "2. Tipos de cookies según su duración",
+        "cookies": [
+          {
+            "tipo": "De sesión",
+            "descripcion": "Se trata de cookies diseñadas para recabar y almacenar datos mientras el usuario visita un sitio web. Cuando finaliza la sesión no quedan almacenadas en el dispositivo informático del usuario."
+          },
+          {
+            "tipo": "Persistentes",
+            "descripcion": "Se trata de cookies que permanecen instaladas en el dispositivo informático del usuario y la información proporcionada puede ser tratada cuando el usuario abandona el sitio web y cuando vuelva a conectarse de nuevo. Estas cookies pueden ser eliminadas en cualquier momento por el usuario."
+          }
+        ]
+      },
+      {
+        "titulo": "3. Tipos de cookies según la entidad que las gestione",
+        "cookies": [
+          {
+            "tipo": "Cookies Propias",
+            "descripcion": "Se trata de cookies que se envían al dispositivo informático del usuario desde el sistema informático propiedad del titular del sitio web, desde donde se ha realizado la solicitud, prestado el servicio o realizado una compra."
+          },
+          {
+            "tipo": "Cookies de Terceros",
+            "descripcion": "Se trata de cookies que se envían al dispositivo informático del usuario desde un dominio o sistema informático que no es propiedad del titular del sitio web, sino por otra entidad tercera autorizada o contratada por el titular del sitio web, desde donde se ha realizado la solicitud, prestado el servicio o realizado una compra."
+          }
+        ]
+      },
+      {
+        "titulo": "4. Tipos de cookies exceptuadas de consentimiento",
+        "cookies": [
+          "Cookies de “entrada del usuario”",
+          "Cookies de autenticación o identificación de usuario (únicamente de sesión).",
+          "Cookies de seguridad del usuario",
+          "Cookies de sesión de reproductor multimedia.",
+          "Cookies de sesión para equilibrar la carga.",
+          "Cookies de personalización de la interfaz de usuario.",
+          "Determinadas cookies de complemento (plug-in) para intercambiar contenidos sociales"
+        ]
+      },
+      {
+        "titulo": "5. Tipos de cookies utilizadas en este sitio web",
+        "parrafo": "Recomendamos revisar nuestra política de cookies cada vez que acceda a nuestro sitio web para informarse de cualquier modificación sobre el uso de nuestras cookies."
+      },
+      {
+        "parrafo": "Informamos que si desactiva alguna de las cookies, es muy probable que algunas funciones de nuestro sitio web no funcionen o funcionen incorrectamente."
+      },
+      {
+        "parrafo": "Si utiliza otros navegadores le recomendamos consulte su política de uso y gestión de cookies."
+      }
+    ]
+  }
+  

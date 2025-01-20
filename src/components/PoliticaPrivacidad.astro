@@ -1,0 +1,31 @@
+---
+import Section from "@/layouts/Section.astro";
+import politicaPrivacidad from "@/data/politicaPrivacidad.json";
+---
+
+<Section>
+    <div
+        class="max-w-screen-xl mx-auto flex flex-col justify-center pt-20 md:pt-36 lg:pt-52 px-4 pb-40"
+    >
+        <h2 class="text-4xl text-center pb-10 font-vidaloka">{politicaPrivacidad.titulo}</h2>
+
+        {
+            politicaPrivacidad.secciones.map((item, index) => (
+                <section>
+                    {item.parrafo && <p>{item.parrafo}</p>}
+                    {item.titulo && <h2>{item.titulo}</h2>}
+                    {item.puntos && (
+                        <ul>
+                            {item.puntos.map((punto, idx) => (
+                                <li>
+                                    <strong>{punto.titulo}:</strong>{" "}
+                                    {punto.descripcion}
+                                </li>
+                            ))}
+                        </ul>
+                    )}
+                </section>
+            ))
+        }
+    </div>
+</Section>
