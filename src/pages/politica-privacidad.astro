@@ -3,14 +3,17 @@ import Header from "@/components/Header.astro";
 import Privacidad from "@/components/PoliticaPrivacidad.astro";
 import Layout from "@/layouts/Layout.astro";
 
-import '@fontsource/vidaloka';
+import "@fontsource/vidaloka";
 import "@fontsource-variable/baloo-tammudu-2";
 
 import Footer from "@/components/Footer.astro";
 import Privacy from "@/components/Privacy.astro";
 ---
 
-<Layout>
+<Layout
+	title="Política de Privacidad - Restaurante La Trilogía"
+	description="Lee nuestra Política de Privacidad para entender cómo recopilamos, utilizamos y protegemos tus datos personales. Cumplimos con el Reglamento General de Protección de Datos (RGPD) para garantizar la seguridad y privacidad de tu información."
+>
 	<Header />
 	<main>
 		<Privacidad />

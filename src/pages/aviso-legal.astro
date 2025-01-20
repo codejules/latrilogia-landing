@@ -3,14 +3,17 @@ import Header from "@/components/Header.astro";
 import Legal from "@/components/AvisoLegal.astro";
 import Layout from "@/layouts/Layout.astro";
 
-import '@fontsource/vidaloka';
+import "@fontsource/vidaloka";
 import "@fontsource-variable/baloo-tammudu-2";
 
 import Footer from "@/components/Footer.astro";
 import Privacy from "@/components/Privacy.astro";
 ---
 
-<Layout>
+<Layout
+	title="Aviso Legal - Restaurante La Trilogía"
+	description="Encuentra toda la información sobre los derechos y responsabilidades legales al utilizar nuestros servicios"
+>
 	<Header />
 	<main>
 		<Legal />
