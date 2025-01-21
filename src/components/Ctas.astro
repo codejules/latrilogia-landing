@@ -1,14 +1,21 @@
 ---
 import Section from "@/layouts/Section.astro";
+import cartaUrl from '@/assets/pdf/carta-restaurante-latrilogia_vf.pdf';
+import menuUrl from '@/assets/pdf/carta-menu-empresas-restaurante-la-trilogia-2022.pdf';
 
-const BUTTONS = [
+type Button = {
+    title: string;
+    url: string;
+}
+
+const BUTTONS:Button[] = [
     {
         title: "La carta",
-        url: 'src/assets/pdf/carta-restaurante-latrilogia_vf.pdf'
+        url: cartaUrl,
     },
     {
         title: "Menú grupos empresas",
-        url: 'src/assets/pdf/carta-menu-empresas-restaurante-la-trilogia-2022.pdf'
+        url: menuUrl,
     },
 ];
 ---
