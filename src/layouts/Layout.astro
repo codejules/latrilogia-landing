@@ -1,6 +1,4 @@
 ---
-import { ClientRouter } from 'astro:transitions';
-
 interface Props {
 	title: string;
 	description: string;
@@ -30,7 +28,6 @@ const { title, description } = Astro.props;
 			is:inline
 			src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"
 		></script>
-		<ClientRouter />
 	</head>
 	<body>
 		<slot />
