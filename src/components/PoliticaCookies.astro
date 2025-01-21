@@ -4,39 +4,39 @@ import politicaCookies from "@/data/politicaCookies.json";
 ---
 
 <Section id="politica-cookies">
-    <div
-        class="max-w-screen-xl mx-auto flex flex-col justify-center pt-20 md:pt-36 lg:pt-52 px-4 pb-40"
-    >
-        <h2 class="text-4xl text-center pb-10 font-vidaloka">
-            {politicaCookies.titulo}
-        </h2>
-        {politicaCookies.contenido.map((item) => {
-            if (item.parrafo) {
-              return <p>{item.parrafo}</p>;
-            }
-            if (item.titulo) {
-              return (
-                <>
-                  <h2>{item.titulo}</h2>
-                  {item.cookies && item.cookies.map((cookie) => (
-                    typeof cookie === 'object' ? (
-                      <p><strong>{cookie.tipo}:</strong> {cookie.descripcion}</p>
-                    ) : (
-                      <p>{cookie}</p>
-                    )
-                  )
-                  )}
-                                    {item.cookies && item.cookies.map((cookie) => (
-                    typeof cookie === 'object' ? (
-                      <p><strong>{cookie.tipo}:</strong> {cookie.descripcion}</p>
-                    ) : (
-                      <p>{cookie}</p>
-                    )
-                  )
-                  )}
-                </>
-              );
-            }
-          })}
-    </div>
+  <div
+    class="max-w-screen-xl mx-auto flex flex-col justify-center pt-20 md:pt-36 lg:pt-52 px-4 pb-40"
+  >
+    <h2 class="text-4xl text-center pb-10 font-vidaloka">
+      {politicaCookies.titulo}
+    </h2>
+
+    {
+      politicaCookies.contenido.map((item, index) => {
+        return (
+          <div>
+            {item.parrafo && <p>{item.parrafo}</p>}
+
+            {item.titulo && (
+              <>
+                <h2>{item.titulo}</h2>
+                {item.cookies &&
+                  item.cookies.map((cookie, idx) => (
+                    <p>
+                      {typeof cookie === "object" ? (
+                        <>
+                          <strong>{cookie.tipo}:</strong> {cookie.descripcion}
+                        </>
+                      ) : (
+                        cookie
+                      )}
+                    </p>
+                  ))}
+              </>
+            )}
+          </div>
+        );
+      })
+    }
+  </div>
 </Section>
