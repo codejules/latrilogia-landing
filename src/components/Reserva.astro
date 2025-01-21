@@ -1,6 +1,6 @@
 ---
 import Section from "@/layouts/Section.astro";
-
+import pan from "@/assets/img/pan.webp";
 const text = [
     `Disfruta de los mejores platos de la <span class="font-semibold"> cocina mediterránea</span> en una de las <span class="font-semibold">zonas más modernas y urbanitas</span> de la ciudad de <span class="font-semibold">València</span>.`,
 ];
@@ -9,7 +9,7 @@ const text = [
 <Section>
     <div class="flex justify-center py-2 md:py-10">
         <div class="hidden xl:block absolute right-0">
-            <img class="w-72" src="src/assets/img/pan.webp" alt="" title="" />
+            <img class="w-72" src={pan.src} alt="" title="" />
         </div>
         <div class="gap-10 justify-center flex flex-col">
             <button
