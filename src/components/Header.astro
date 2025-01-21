@@ -1,7 +1,19 @@
 ---
 import ButtonMenu from "./ButtonMenu.astro";
 
-const MENU = [
+type Menus = {
+    text?: string;
+    url?: string;
+    clase: string;
+    type?: string;
+    src?: string;
+    alt?: string;
+    title?: string;
+    imgClass?: string;
+    external?: boolean;
+};
+
+const MENU:Menus[] = [
     {
         text: "Carta",
         url: "/#carta",

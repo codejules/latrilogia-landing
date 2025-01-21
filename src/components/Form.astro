@@ -1,47 +1,7 @@
 ---
 const subject = "Formulario web Restaurante La Trilogia";
 
-type Fields = {
-    type?: "text" | "email" | "password" | "tel";
-    name: string;
-    placeholder: string;
-    required: boolean;
-    validationMessage: string;
-    feedbackMessage?: string;
-    isTextarea?: boolean;
-};
-
-const FIELDS: Fields[] = [
-    {
-        type: "text",
-        name: "name",
-        placeholder: "Nombre",
-        required: true,
-        validationMessage: "Ingresa tu nombre",
-    },
-    {
-        type: "email",
-        name: "email",
-        placeholder: "Email",
-        required: true,
-        validationMessage: "Ingresa un email válido",
-        feedbackMessage: "Ingresa tu email",
-    },
-    {
-        type: "text",
-        name: "subject",
-        placeholder: "Asunto",
-        required: false,
-        validationMessage: "Ingresa el asunto",
-    },
-    {
-        name: "message",
-        placeholder: "Mensaje",
-        required: true,
-        validationMessage: "Ingresa tu mensaje",
-        isTextarea: true,
-    },
-];
+import { FIELDS } from "@/types/formFields";
 
 import ButtonPrivacy from "@/components/ButtonPrivacy.astro";
 ---
@@ -98,20 +58,6 @@ import ButtonPrivacy from "@/components/ButtonPrivacy.astro";
             )
         }
     </div>
-
-<!--     <div class="mb-3">
-        <textarea
-            name="message"
-            required
-            placeholder="Mensaje"
-            class="w-full px-4 py-3 border placeholder:text-slate-400 rounded-md outline-none h-36 focus:ring-4 border-slate-300 focus:border-slate-600 ring-slate-100"
-        ></textarea>
-        <div
-            class="empty-feedback invalid-feedback text-red-400 text-sm mt-1 pl-2 text-left"
-        >
-            Ingresa tu mensaje
-        </div>
-    </div> -->
 
     <ButtonPrivacy />
 

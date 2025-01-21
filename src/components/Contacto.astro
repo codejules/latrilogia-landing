@@ -1,6 +1,12 @@
 ---
 import Section from "@/layouts/Section.astro";
 import Form from "./Form.astro";
+
+const imgMaps = "src/assets/img/maps-latrilogia.webp";
+const urlMaps = "https://goo.gl/maps/FP1MUzfF9WYwBBiq8";
+const address = [
+    `<p>C/ Sant Clement 4.</p> <p>46015 València, Valencia.</p><p>Tel: <a href="tel:193 26 55" class="hover:text-button">96 193 26 55</a></p><p><a href="mailto:web@restaurantelatrilogia.es" class="hover:text-button">web@restaurantelatrilogia.es</a></p>`,
+];
 ---
 
 <Section id="contacto">
@@ -8,22 +14,11 @@ import Form from "./Form.astro";
         class="max-w-screen-xl mx-auto flex flex-col justify-center lg:flex-row gap-6 py-20"
     >
         <div class="flex flex-col px-4">
-            <a href="https://goo.gl/maps/FP1MUzfF9WYwBBiq8" target="_blank">
-                <img
-                    src="src/assets/img/maps-latrilogia.webp"
-                    alt=""
-                    title=""
-                    class="lg:w-96"
-                />
+            <a href={urlMaps} target="_blank">
+                <img src={imgMaps} alt="" title="" class="lg:w-96" />
             </a>
             <div class="pt-4 flex flex-col text-right">
-                <p>C/ Sant Clement 4.</p>
-                <p>46015 València, Valencia.</p>
-                <p>Tel: <a href="tel:193 26 55" class="hover:text-button">96 193 26 55</a></p>
-                <p>
-                    <a href="mailto:web@restaurantelatrilogia.es" class="hover:text-button"
-                        >web@restaurantelatrilogia.es</a>
-                </p>
+                <p set:html={address} />
             </div>
         </div>
         <div class="bg-hero-contact p-4 bg-left-top bg-cover bg-no-repeat mx-4">
