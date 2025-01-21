@@ -8,9 +8,9 @@ export default {
 				'button': '#cfb49b'
 			},
 			backgroundImage: {
-				'hero-pattern': "url('src/assets/img/bg_latrilogia.webp')",
-				'hero-contact': "url('src/assets/img/bg-contacto.webp')",
-				'hero-footer': "url('src/assets/img/bg-footer.webp')",
+				'hero-pattern': "url('/bg_latrilogia.webp')",
+				'hero-contact': "url('/bg-contacto.webp')",
+				'hero-footer': "url('/bg-footer.webp')",
 			},
 			fontFamily: {
 				'vidaloka': ['"Vidaloka"'],
