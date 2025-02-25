@@ -24,7 +24,7 @@ const BUTTONS:Button[] = [
     <div class="flex flex-col md:flex-row justify-evenly gap-4 md:gap-1">
         {
             BUTTONS.map(({ title, url }) => (
-                <button class="uppercase bg-button rounded-full text-xl text-white pt-3 px-8">
+                <button class="uppercase bg-button rounded-full text-xl text-white py-2 px-4 hover:text-black transition duration-500 ease-in">
                     <a href={url} target="_blank" >
                     {title}
                 </a>
