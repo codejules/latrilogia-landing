@@ -89,7 +89,7 @@ export default function FileUpload() {
     };
 
     return (
-        <div class="max-w-2xl mx-auto p-8 pt-20 md:pt-40">
+        <div class="max-w-2xl mx-auto p-8">
             <div class="space-y-6">
                 <h2 class="text-2xl font-bold text-gray-900">Subir archivo</h2>
                 <form onSubmit={handleSubmit} class="space-y-4">
