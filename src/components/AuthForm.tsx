@@ -25,7 +25,7 @@ export default function AuthForm({ onAuthSuccess }: { onAuthSuccess: () => void 
   };
 
   return (
-    <div class="bg-button p-4 md:p-8 rounded-xl w-full md:w-1/2 mx-auto">
+    <div class="bg-button p-4 md:p-8 rounded-xl w-full md:w-2/4 xl:w-2/6 mx-auto">
       <div class="p-3 md:p-6 bg-white rounded-xl">
         <h2 class="text-2xl text-gray-900 mb-6">Accede con tus credenciales</h2>
 
