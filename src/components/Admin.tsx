@@ -36,7 +36,7 @@ export default function Admin() {
   const handleSubmit = async (e: Event) => {
     e.preventDefault();
     setError("");
-    setLoading(true); // Activar el spinner
+    setLoading(true);
 
     try {
 
@@ -51,7 +51,6 @@ export default function Admin() {
       }
 
       if (data) {
-        // localStorage.setItem('auth_token', data.session.access_token);
         setAuth(true);
       } else {
         setError("Credenciales inválidas");
@@ -61,7 +60,7 @@ export default function Admin() {
       console.error(err.message);
       setError("Ocurrió un error durante la autenticación.");
     } finally {
-      setLoading(false); // Desactivar el spinner
+      setLoading(false);
     }
   };
 
