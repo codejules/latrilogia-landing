@@ -1,7 +1,7 @@
 import { useState, useEffect } from "preact/hooks";
 import AuthForm from "./AuthForm";
 import AddFile from "./AddFile";
-import { supabase } from "../lib/supabaseClient";
+import { supabase } from "@/lib/supabaseClient";
 import ProtectedRoute from "./ProtectedRoute";
 
 export default function Admin() {

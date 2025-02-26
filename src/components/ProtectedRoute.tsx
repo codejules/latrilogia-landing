@@ -1,6 +1,6 @@
 import { useEffect, useState } from "preact/hooks";
 import Spinner from "@/icons/Spinner";
-import { supabase } from "../lib/supabaseClient";
+import { supabase } from "@/lib/supabaseClient";
 
 export default function ProtectedRoute({ children }: { children: any }) {
   const [auth, setAuth] = useState<boolean | null>(null);
