@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://restaurantelatrilogia.es/sitemap.xml
+Sitemap: https://restaurantelatrilogia.es/sitemap-index.xml
