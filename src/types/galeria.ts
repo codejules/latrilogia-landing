@@ -1,13 +1,13 @@
-import plato1 from '@/assets/img/carta/restaurante-la-trilogia-plato1-875x1024.jpg';
-import plato7 from '@/assets/img/carta/restaurante-la-trilogia-plato7-1024x982.jpg';
-import plato6 from '@/assets/img/carta/restaurante-la-trilogia-plato6-1024x766.jpg';
-import plato5 from '@/assets/img/carta/restaurante-la-trilogia-plato5-1024x766.jpg';
-import plato4 from '@/assets/img/carta/restaurante-la-trilogia-plato4-1024x766.jpg';
-import plato2 from '@/assets/img/carta/restaurante-la-trilogia-plato2-883x1024.jpg';
-import plato3 from '@/assets/img/carta/restaurante-la-trilogia-plato3-1024x766.jpg';
-import plato9 from '@/assets/img/carta/restaurante-la-trilogia-plato9-1024x766.jpg';
-import exterior1 from '@/assets/img/carta/latriloga-exterior.jpg';
-import exterior2 from '@/assets/img/carta/latriloga-exterior_2.jpg';
+import plato1 from '@/assets/img/carta/restaurante-la-trilogia-plato1-875x1024.webp';
+import plato7 from '@/assets/img/carta/restaurante-la-trilogia-plato7-1024x982.webp';
+import plato6 from '@/assets/img/carta/restaurante-la-trilogia-plato6-1024x766.webp';
+import plato5 from '@/assets/img/carta/restaurante-la-trilogia-plato5-1024x766.webp';
+import plato4 from '@/assets/img/carta/restaurante-la-trilogia-plato4-1024x766.webp';
+import plato2 from '@/assets/img/carta/restaurante-la-trilogia-plato2-883x1024.webp';
+import plato3 from '@/assets/img/carta/restaurante-la-trilogia-plato3-1024x766.webp';
+import plato9 from '@/assets/img/carta/restaurante-la-trilogia-plato9-1024x766.webp';
+import exterior1 from '@/assets/img/carta/latriloga-exterior.webp';
+import exterior2 from '@/assets/img/carta/latriloga-exterior_2.webp';
 
 export type Image = {
     url: string;
