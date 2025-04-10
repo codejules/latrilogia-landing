@@ -1,4 +1,7 @@
+User-agent: Googlebot
+Disallow: /nogooglebot/
+
 User-agent: *
 Allow: /
 
-Sitemap: https://restaurantelatrilogia.es/sitemap-index.xml
+Sitemap: https://restaurantelatrilogia.es/sitemap.xml
