@@ -16,7 +16,6 @@
     "@fontsource/vidaloka": "^5.1.1",
     "@splidejs/splide": "^4.1.4",
     "@splidejs/splide-extension-auto-scroll": "^0.5.3",
-    "@supabase/supabase-js": "^2.48.1",
     "astro": "^5.5.6",
     "flowbite": "^2.5.2",
     "preact": "^10.26.2",
