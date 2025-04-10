@@ -4,12 +4,9 @@ import tailwind from '@astrojs/tailwind';
 import netlify from '@astrojs/netlify';
 import preact from '@astrojs/preact';
 
-import sitemap from '@astrojs/sitemap';
-
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://restaurantelatrilogia.es/',
-  integrations: [tailwind(), preact(), sitemap()],
+  integrations: [tailwind(), preact()],
   output: 'server',
   adapter: netlify(),
   vite: {
