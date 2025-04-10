@@ -14,7 +14,7 @@ const paragraphs = [
         <h2 class="text-center text-6xl font-vidaloka">Carta</h2>
         <div class="flex flex-col justify-center gap-4 text-center">
             {
-                paragraphs.map((text, index) => (
+                paragraphs.map((text) => (
                     <p set:html={text} />
                 ))
             }
