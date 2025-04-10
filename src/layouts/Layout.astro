@@ -25,15 +25,20 @@ const { title, description } = Astro.props;
 		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 		<title>{title}</title>
 		<script
+			defer
 			is:inline
 			src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"
 		></script>
+		<script
+			is:inline
+			src="https://web3forms.com/client/script.js"
+			async
+			defer></script>
 		<link rel="sitemap" href="/sitemap-index.xml" />
+		<link rel="preload" as="image" href="/bg_latrilogia.webp" />
 	</head>
 	<body>
 		<slot />
-		<script src="https://web3forms.com/client/script.js" async defer
-		></script>
 	</body>
 </html>
 
