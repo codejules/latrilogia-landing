@@ -12,6 +12,12 @@ const { title, description } = Astro.props;
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
+		
+		<link rel="preload" as="image" href="/bg_latrilogia.webp" />
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		<link rel="sitemap" href="/sitemap.xml">
+
+		<title>{title}</title>
 		<meta name="description" content={description} />
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
@@ -22,8 +28,7 @@ const { title, description } = Astro.props;
 		<meta property="og:site_name" content="Restaurante La Trilogía" />
 		<meta property="og:locale" content="es_ES" />
 		<meta property="og:type" content="website" />
-		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-		<title>{title}</title>
+
 		<script
 			defer
 			is:inline
@@ -34,7 +39,6 @@ const { title, description } = Astro.props;
 			src="https://web3forms.com/client/script.js"
 			async
 			defer></script>
-		<link rel="preload" as="image" href="/bg_latrilogia.webp" />
 	</head>
 	<body>
 		<slot />
