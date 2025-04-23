@@ -7,7 +7,7 @@ import preact from '@astrojs/preact';
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), preact()],
-  output: 'server',
+  output: 'static',
   adapter: netlify(),
   vite: {
     envPrefix: ['VITE_'],
