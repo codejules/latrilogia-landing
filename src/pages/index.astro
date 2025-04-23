@@ -13,7 +13,11 @@ import Footer from "@/components/Footer.astro";
 import "@fontsource/vidaloka";
 import "@fontsource-variable/baloo-2";
 
-const nonce = crypto.randomUUID().replace(/-/g, '');
+const nonce = crypto.randomUUID().replace(/-/g, "");
+Astro.response.headers.set(
+	"Content-Security-Policy",
+	`default-src 'self'; script-src 'self' https://js.hcaptcha.com https://newassets.hcaptcha.com https://cdn.jsdelivr.net https://web3forms.com 'nonce-${nonce}'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; frame-src https://js.hcaptcha.com https://newassets.hcaptcha.com; connect-src 'self' https://newassets.hcaptcha.com https://web3forms.com; object-src 'none'; base-uri 'none'; frame-ancestors 'none';`,
+);
 ---
 
 <Layout
