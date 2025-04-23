@@ -5,52 +5,57 @@ import Section from "@/layouts/Section.astro";
 ---
 
 <Section id="galeria">
-<div class="py-10 -z-10">
-    <h2 class="text-center text-6xl font-vidaloka pb-10">Galería</h2>
+    <div class="py-10 -z-10">
+        <h2 class="text-center text-6xl font-vidaloka pb-10">Galería</h2>
 
-    <div class="splide" role="group" aria-label="Image Slider">
-        <div class="splide__track">
-            <ul class="splide__list">
-                {
-                    IMAGES.map(({ url, alt, title }) => (
-                        <li class="splide__slide">
-                            <img
-                                src={url}
-                                alt={alt}
-                                title={title}
-                                class="rounded-lg shadow-lg
+        <div class="splide" role="group" aria-label="Image Slider">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    {
+                        IMAGES.map(({ url, alt, title }) => (
+                            <li class="splide__slide">
+                                <img
+                                    src={url}
+                                    alt={alt}
+                                    title={title}
+                                    class="rounded-lg shadow-lg
                             hover:cursor-pointer transform duration-300 ease-in hover:scale-95"
-                                onclick="openModal(this.src)"
-                                loading="lazy"
-                            />
-                        </li>
-                    ))
-                }
-            </ul>
+                                    onclick="openModal(this.src)"
+                                    loading="lazy"
+                                />
+                            </li>
+                        ))
+                    }
+                </ul>
+            </div>
         </div>
     </div>
-</div>
 
-<div
-    id="image-modal"
-    class="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center hidden z-50"
-    onclick="closeModal()"
->
-    <img
-        id="modal-image"
-        src=""
-        alt="Imagen ampliada"
-        class="w-80 md:w-2/5 object-contain rounded-xl"
-    />
-</div>
-
+    <div
+        id="image-modal"
+        class="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center hidden z-50"
+    >
+        <img
+            id="modal-image"
+            src=""
+            alt="Imagen ampliada"
+            class="w-80 md:w-2/5 object-contain rounded-xl"
+        />
+    </div>
 </Section>
 
 <script>
     import { initSplide } from "@/types/initSplide";
     import { openModal, closeModal } from "@/types/openModal";
+  
     initSplide();
-</script>
+  
+    const modal = document.getElementById("image-modal");
+    if (modal) {
+      modal.addEventListener("click", () => closeModal());
+    }
+  </script>
+  
 
 <style>
     .splide {
@@ -66,5 +71,4 @@ import Section from "@/layouts/Section.astro";
         object-fit: cover;
         width: 100%;
     }
-    
 </style>
