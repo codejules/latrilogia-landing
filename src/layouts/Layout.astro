@@ -2,9 +2,12 @@
 interface Props {
 	title: string;
 	description: string;
+	nonce: string;
 }
 
 const { title, description } = Astro.props;
+
+const { nonce } = Astro.props;
 ---
 
 <!doctype html>
@@ -12,10 +15,14 @@ const { title, description } = Astro.props;
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		
+		<meta
+			http-equiv="Content-Security-Policy"
+			content={`default-src 'self'; script-src 'self' 'nonce-${nonce}' https://js.hcaptcha.com https://newassets.hcaptcha.com https://cdn.jsdelivr.net https://web3forms.com; style-src 'self' 'unsafe-inline'; font-src 'self'; object-src 'none'; frame-src https://newassets.hcaptcha.com; connect-src 'self' https://newassets.hcaptcha.com; img-src 'self';`}
+		/>
+
 		<link rel="preload" as="image" href="/bg_latrilogia.webp" />
 		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-		<link rel="sitemap" href="/sitemap.xml">
+		<link rel="sitemap" href="/sitemap.xml" />
 
 		<title>{title}</title>
 		<meta name="description" content={description} />

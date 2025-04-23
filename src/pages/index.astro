@@ -11,19 +11,22 @@ import Privacy from "@/components/Privacy.astro";
 import Footer from "@/components/Footer.astro";
 
 import "@fontsource/vidaloka";
-import '@fontsource-variable/baloo-2';
+import "@fontsource-variable/baloo-2";
+
+const nonce = crypto.randomUUID().replace(/-/g, '');
 ---
 
 <Layout
+	nonce={nonce}
 	title="Restaurante La Trilogía - Cocina Mediterránea"
 	description="Restaurante la Trilogía es conocida en Valencia por su tradición en la dieta mediterránea. Pescados, carnes, arroces, ensaladas y postres. Haz tu reserva."
 >
-	<Header />
+	<Header nonce={nonce} />
 	<main>
 		<Hero />
 		<PreCarta />
 		<Carta />
-		<Galeria />
+		<Galeria nonce={nonce} />
 		<Reserva />
 		<Contacto />
 		<Privacy />
