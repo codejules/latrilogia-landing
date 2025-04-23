@@ -49,8 +49,8 @@ const { nonce } = Astro.props;
 </Section>
 
 <script is:inline nonce={nonce} type="module">
-    import { initSplide } from "../src/types/initSplide";
-    import { openModal, closeModal } from "../src/types/openModal";
+    import { initSplide } from "@/types/initSplide";
+    import { openModal, closeModal } from "@/types/openModal";
     initSplide();
 </script>
 
