@@ -2,8 +2,6 @@
 import "@splidejs/splide/css";
 import { IMAGES } from "@/types/galeria";
 import Section from "@/layouts/Section.astro";
-
-const { nonce } = Astro.props;
 ---
 
 <Section id="galeria">
@@ -48,9 +46,9 @@ const { nonce } = Astro.props;
 
 </Section>
 
-<script is:inline nonce={nonce} type="module">
-    import { initSplide } from "../types/initSplide";
-    import { openModal, closeModal } from "../types/openModal";
+<script>
+    import { initSplide } from "@/types/initSplide";
+    import { openModal, closeModal } from "@/types/openModal";
     initSplide();
 </script>
 

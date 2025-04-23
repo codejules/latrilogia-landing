@@ -12,22 +12,18 @@ import Footer from "@/components/Footer.astro";
 
 import "@fontsource/vidaloka";
 import "@fontsource-variable/baloo-2";
-
-import { nonceCSP } from "@/utils/nonceCSP";
-const { nonce } = nonceCSP(Astro);
 ---
 
 <Layout
-	nonce={nonce}
 	title="Restaurante La Trilogía - Cocina Mediterránea"
 	description="Restaurante la Trilogía es conocida en Valencia por su tradición en la dieta mediterránea. Pescados, carnes, arroces, ensaladas y postres. Haz tu reserva."
 >
-	<Header nonce={nonce} />
+	<Header />
 	<main>
 		<Hero />
 		<PreCarta />
 		<Carta />
-		<Galeria nonce={nonce} />
+		<Galeria />
 		<Reserva />
 		<Contacto />
 		<Privacy />
