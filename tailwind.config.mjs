@@ -8,9 +8,8 @@ export default {
 				'button': '#cfb49b'
 			},
 			backgroundImage: {
-				'hero-pattern': "url('/bg_latrilogia.webp')",
-				'hero-contact': "url('/bg-contacto.webp')",
-				'hero-footer': "url('/bg-footer.webp')",
+				'hero-contact': "url('https://cdn-images.restaurantelatrilogia.es/bg-contacto.webp')",
+				'hero-footer': "url('https://cdn-images.restaurantelatrilogia.es/bg-footer.webp')",
 			},
 			fontFamily: {
 				'vidaloka': ['"Vidaloka"'],
