@@ -1,5 +1,6 @@
 ---
 import ButtonMenu from "./ButtonMenu.astro";
+const cdnImage = import.meta.env.CDN_DOMAIN;
 
 type Menus = {
     text?: string;
@@ -20,7 +21,7 @@ const MENU: Menus[] = [
     { text: "Galería", url: "/#galeria", clase: baseClass },
     {
         type: "logo",
-        src: "./logo-latrilogia.webp",
+        src: `${cdnImage}/logo-latrilogia.webp`,
         alt: "Logo Restaurante La Trilogia",
         title: "Logo Restaurante La Trilogia",
         clase: "w-1/2 lg:w-9/12 mx-auto hover:scale-90 transition ease-in duration-300",

@@ -2,7 +2,8 @@
 import Section from "@/layouts/Section.astro";
 const title = "La trilogía de los placeres mediterráneos:";
 const subtitle = "comida saludable, clima y ambiente inmejorables";
-const heroImg = "/bg_latrilogia.webp";
+
+const cdnImage = import.meta.env.CDN_DOMAIN;
 ---
 
 <Section>
@@ -10,9 +11,9 @@ const heroImg = "/bg_latrilogia.webp";
     class="relative w-full max-md:min-h-[400px] md:h-[560px] lg:h-screen overflow-hidden"
   >
     <picture>
-      <source srcset="/bg_latrilogia-768.webp" media="(max-width: 560px)" />
+      <source srcset={`${cdnImage}/bg_latrilogia-768.webp`} media="(max-width: 560px)" />
       <img
-        src="/bg_latrilogia.webp"
+        src={`${cdnImage}/bg_latrilogia.webp`}
         alt="Restaurante La Trilogía hero image"
         width="1920"
         height="1080"
